@@ -76,14 +76,6 @@ function clearErrors() {
   document.getElementById("bet").className="";
 }
 
-function displayResults() {
-
-}
-
-function replay() {
-
-}
-
 function reset() {
   document.getElementById("results").style.display="none";
   document.getElementById("bet").value = "0.00";

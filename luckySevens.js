@@ -14,40 +14,45 @@ function verify() {
     alert("You have to bet some money if you want to play!");
     document.getElementById("bet").className="error";
     document.getElementById("bet").focus();
-  } else {
-
-    var money = bet;
-    var maxMoney = money;
-    var rolls = 0;
-    var rollAtMax = 0;
-
-
-    while (money > 0) {
-
-      var diceRoll = rollDice();
-
-      if (diceRoll == 7) {
-        money = money + 4;
-      } else {
-        money = money - 1;
-      }
-
-      rolls++;
-      
-      if (money > maxMoney) {
-        maxMoney = money;
-        rollAtMax = rolls;
-      }
-
-
-    }
-
-
-
-
-
+    return;
   }
 
+  play();
+
+
+// end of verify function
+}
+
+function play() {
+  var money = bet;
+  var maxMoney = money;
+  var rolls = 0;
+  var rollAtMax = 0;
+
+
+  while (money > 0) {
+
+    var diceRoll = rollDice();
+
+    if (diceRoll == 7) {
+      money = money + 4;
+    } else {
+      money = money - 1;
+    }
+
+    rolls++;
+
+    if (money > maxMoney) {
+      maxMoney = money;
+      rollAtMax = rolls;
+    }
+
+    // end of while money > 0 loop;
+  }
+}
+
+function rollDice() {
+  return (roll6sided + roll6sided);
 }
 
 function roll6sided() {
@@ -55,10 +60,14 @@ function roll6sided() {
   return num;
 }
 
-function rollDice() {
-  return (roll6sided + roll6sided);
-}
-
 function clearErrors() {
   document.getElementById("bet").className="";
+}
+
+function displayResults() {
+
+}
+
+function replay() {
+
 }

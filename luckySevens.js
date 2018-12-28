@@ -6,8 +6,18 @@ Last Modified:
 function verify() {
   clearErrors();
 
+  var bet = document.getElementById("bet").value;
+
+  if (bet == "" || isNaN(bet)) {
+      alert("Starting bet must be filled in with a number.");
+      document.getElementById("bet").className="error";
+      document.getElementById("bet").focus();
+      return;
+  }
+  
   // parseFloat takes the input (type string) and makes it into float, then toFixed returns string, which I convert back to float.
-  var bet = parseFloat(parseFloat(document.getElementById("bet").value).toFixed(2));
+  bet = parseFloat(parseFloat(document.getElementById("bet").value).toFixed(2));
+
 
   if (bet<=0) {
     alert("You have to bet some money if you want to play!");

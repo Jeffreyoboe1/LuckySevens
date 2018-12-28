@@ -17,13 +17,13 @@ function verify() {
     return;
   }
 
-  play();
+  play(bet);
 
 
 // end of verify function
 }
 
-function play() {
+function play(bet) {
   var money = bet;
   var maxMoney = money;
   var rolls = 0;
@@ -49,11 +49,17 @@ function play() {
 
     // end of while money > 0 loop;
   }
-  displayResults();
+
+  document.getElementById('resultBet').innerText = bet;
+  document.getElementById('resultRollsBeforeBroke').innerText = rolls;
+  document.getElementById('resultMaxMoney').innerText = maxMoney;
+  document.getElementById('resultRollAtMax').innerText = rollAtMax;
+  document.getElementById("results").style.display="block";
+
 }
 
 function rollDice() {
-  return (roll6sided + roll6sided);
+  return (roll6sided() + roll6sided());
 }
 
 function roll6sided() {
@@ -66,8 +72,6 @@ function clearErrors() {
 }
 
 function displayResults() {
-
-  document.getElementById("results").style.display="block";
 
 }
 

@@ -1,6 +1,6 @@
 /*
 Creator:  Jeffrey S. Padgett
-Date Created:  Dec. 27, 2018
+Date Created:  Dec. 28, 2018
 Last Modified:
 */
 function verify() {
@@ -17,7 +17,6 @@ function verify() {
   }
 
   play(bet);
-
 
 // end of verify function
 }
@@ -55,9 +54,6 @@ function play(bet) {
   document.getElementById('resultRollAtMax').innerText = rollAtMax;
   document.getElementById("results").style.display="block";
   document.getElementById("play").innerText="Play Again";
-
-
-
 }
 
 function rollDice() {
@@ -77,6 +73,4 @@ function reset() {
   document.getElementById("results").style.display="none";
   document.getElementById("bet").value = "0.00";
   document.getElementById("play").innerText = "Play";
-  
-
 }

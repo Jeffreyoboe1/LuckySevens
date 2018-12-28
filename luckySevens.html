@@ -52,6 +52,16 @@ Last Modified:
         font-weight: bold;
       }
 
+      input {
+        text-align: right;
+        font-size: 1.1em;
+      }
+
+      label {
+        margin-right: 20px;
+        font-size: 1.2em;
+      }
+
     </style>
 
     <script type="text/javascript" src="luckySevens.js"></script>
@@ -60,8 +70,8 @@ Last Modified:
   <body class="center">
 
     <h1>Lucky Sevens</h1>
-    <label for="bet">Starting Bet:</label>
-    <input id="bet"type="number">
+    <label for="bet" style="margin-right: 10px;">Starting Bet:</label>
+    $<input id="bet"type="number" value="0.00" step=".01" min="0">
     <br>
     <button type="submit" name="play">Play</button>
 

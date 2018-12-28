@@ -49,6 +49,7 @@ function play() {
 
     // end of while money > 0 loop;
   }
+  displayResults();
 }
 
 function rollDice() {
@@ -65,6 +66,8 @@ function clearErrors() {
 }
 
 function displayResults() {
+
+  document.getElementById("results").style.display="block";
 
 }
 

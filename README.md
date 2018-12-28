@@ -1,5 +1,5 @@
 # LuckySevens
-A browser betting game using HTML, Bootstrap, CSS, and Javascript.
+A browser betting game using HTML, CSS, and Javascript.
 
 This game takes a starting bet from the user.  If the bet is negative or zero, it displays an error.
 

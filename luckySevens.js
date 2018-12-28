@@ -4,7 +4,14 @@ Date Created:  Dec. 27, 2018
 Last Modified:
 */
 function verify() {
-  alert("verify the bet!")
+  var bet = document.getElementById("bet").value;
+
+  if (bet<=0) {
+    alert("Your bet must be greater than 0");
+    document.getElementById("bet").className="error";
+    document.getElementById("bet").focus();
+  }
+
 }
 
 function roll6sided() {
@@ -14,4 +21,9 @@ function roll6sided() {
 
 function rollDice() {
   return (roll6sided + roll6sided);
+}
+
+function clearErrors() {
+
+
 }

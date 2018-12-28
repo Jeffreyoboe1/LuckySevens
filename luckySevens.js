@@ -6,9 +6,11 @@ Last Modified:
 function verify() {
   clearErrors();
 
-  // parseInt takes the input (type string) and makes it into int, so I can perform calculations.
-  var bet = parseFloat(document.getElementById("bet").value).toFixed(2);
+  // parseFloat takes the input (type string) and makes it into float, then toFixed returns string, which I convert back to float.
+  var bet = parseFloat(parseFloat(document.getElementById("bet").value).toFixed(2));
+  var bet2 = 10.00;
   console.log('bet is: ' + bet);
+  console.log('bet2 is: ' + bet2);
 
   if (bet<=0) {
     alert("You have to bet some money if you want to play!");

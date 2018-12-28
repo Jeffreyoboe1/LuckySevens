@@ -57,6 +57,9 @@ function play(bet) {
   document.getElementById('resultMaxMoney').innerText = maxMoney;
   document.getElementById('resultRollAtMax').innerText = rollAtMax;
   document.getElementById("results").style.display="block";
+  document.getElementById("play").innerText="Play Again";
+  document.getElementById("reset").style.display="inline";
+
 
 }
 
@@ -78,5 +81,13 @@ function displayResults() {
 }
 
 function replay() {
+
+}
+
+function reset() {
+  document.getElementById("results").style.display="none";
+  document.getElementById("bet").value = "0.00";
+  document.getElementById("play").innerText = "Play";
+  document.getElementById("reset").style.display="none";
 
 }
